@@ -2,9 +2,8 @@ import pickle
 
 import matplotlib.pyplot as plt
 import numpy as np
-from PIL import Image
-
 from dnn_app_utils import L_layer_model, load_data, predict, print_mislabeled_images
+from PIL import Image
 
 plt.rcParams["figure.figsize"] = (5.0, 4.0)  # set default size of plots
 plt.rcParams["image.interpolation"] = "nearest"
@@ -38,7 +37,7 @@ test_x = test_x_flatten / 255
 
 print("train_x's shape: " + str(train_x.shape))
 print("test_x's shape: " + str(test_x.shape))
-# CONSTANTS
+### CONSTANTS ###
 layers_dims = [12288, 20, 7, 5, 1]  # 4-layer model
 
 parameters = L_layer_model(
